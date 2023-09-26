@@ -1,0 +1,11 @@
+.error-tooltip {
+  position: absolute;
+  z-index: 3;
+
+  background-color: rgba(97, 97, 97, 0.9);
+  color: #fff;
+  border-radius: 4px;
+  padding: 6px 8px;
+  font-family: Roboto, Segoe UI, Droid Sans, Tahoma, Arial, sans-serif;
+  font-size: 10px;
+}

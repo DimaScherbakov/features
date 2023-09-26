@@ -1,0 +1,5 @@
+<div *ngIf="lines.length"
+  class="error-tooltip"
+  [ngStyle]="{ left: tooltipCoordinates?.left + 'px', top: tooltipCoordinates?.top + 'px' }">
+  <div *ngFor="let line of lines">{{ line }}</div>
+</div>
