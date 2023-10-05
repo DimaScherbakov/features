@@ -1,0 +1,93 @@
+table {
+  font-size: 5px;
+}
+
+
+.read-more-position-full-name {
+  z-index: 999;
+  top: 20px;
+}
+.ml-small {
+  margin-left: 5px;
+}
+.material-icons-wrapper {
+  color: gray;
+  cursor: pointer;
+  border-radius: 3px;
+  width: 28px;
+  height: 28px;
+  position: relative;
+  top: 0;
+  left: 0;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.material-icons-wrapper:hover {
+  box-shadow: 0 6px 12px #000000;
+  top: -1px;
+  left: -1px;
+}
+.material-icons-wrapper .material-icons {
+  font-size: 15px !important;
+  vertical-align: middle;
+}
+
+.table-wrapper {
+  max-height: 500px;
+  overflow-y: auto;
+  overflow-x: auto;
+}
+.table-wrapper .table {
+  margin-bottom: 0;
+}
+.table-wrapper table {
+  width: 100%;
+  font-size: 13px;
+  border-spacing: 0;
+  border-collapse: separate;
+}
+.table-wrapper table tbody tr:nth-child(odd) {
+  background-color: #fcfcfc;
+}
+.table-wrapper table tbody tr:nth-child(even) {
+  background-color: #ffffff;
+}
+.table-wrapper table tr th, .table-wrapper table tr td {
+  white-space: nowrap;
+}
+.table-wrapper table tr th {
+  line-height: 18px;
+  padding: 10px;
+  text-align: left;
+  border-right: 1px solid #f1f1f1;
+  border-top: 1px solid #f1f1f1;
+  position: sticky;
+  top: 0;
+  height: 40px;
+  background: #ffffff;
+  font-weight: 700;
+  z-index: 2;
+}
+.table-wrapper table tr td {
+  line-height: 18px;
+  padding: 10px;
+  border-right: 1px solid #f1f1f1;
+  border-top: 1px solid #f1f1f1;
+  height: 40px;
+}
+.table-wrapper table tr td span {
+  line-height: 18px;
+}
+::ng-deep .toh{
+  position: absolute;
+  border: 1px solid rgba(0,0,0, 0.26);
+  background-color: white;
+  padding: 0 2px 0 2px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+  white-space: nowrap;
+
+}
