@@ -1,0 +1,15 @@
+<ng-container *ngIf="allItems">
+  <ng-container>
+    <input type="checkbox" [(ngModel)]="allItems.checked" (change)="changeAll()">{{allItems.title}}
+  </ng-container>
+</ng-container>
+<ng-container *ngIf="items">
+  <ng-container *ngFor="let item of items">
+    <input type="checkbox" [(ngModel)]="item.checked" (change)="changeItem(item)">{{item.title}}
+  </ng-container>
+</ng-container>
+<div>
+  app-checkbox-filter:
+  <pre>all items config{{allItems | json}}</pre>
+  <pre>items config{{items | json}}</pre>
+</div>
