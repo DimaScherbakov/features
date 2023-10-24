@@ -1,0 +1,34 @@
+::ng-deep .material-panel .mat-expansion-panel-header .mat-expansion-indicator,
+::ng-deep .material-panel .mat-expansion-indicator {
+  cursor: pointer !important;
+}
+
+.material-panel .mat-accordion .mat-expansion-panel:last-of-type {
+  border-radius: 2px;
+}
+
+.mat-expansion-panel-header {
+  height: 48px;
+  padding: 0 9px 0 16px;
+}
+
+.mat-expansion-panel-header .mat-expansion-panel-header-title .panel-heading {
+  color: #333;
+}
+
+.mat-expansion-panel-header .mat-expansion-panel-header-title .panel-heading h2 {
+  margin: 0;
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.mat-expansion-panel-header-description {
+  justify-content: flex-end;
+  margin-right: 0;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+

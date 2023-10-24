@@ -1,49 +1,63 @@
 .slider-container {
   position: relative;
-  padding: 20px;
-  background-color: #f7f7f7;
-  border-radius: 5px;
+  background-color: transparent;
   width: 100%;
-  max-width: 600px;
 }
 
 .timeline-bar {
   position: absolute;
   top: 50%;
-  left: 0;
-  width: 100%;
-  height: 10px;
-  background-color: white; /* White background for timeline bar */
+  left: 10px;
+  width: calc(100% - 21px);
   transform: translateY(-50%);
   z-index: 1;
+  overflow-x: hidden;
+  height: 60px;
+  border: 1px solid #d3d3d3;
 }
 
 .timeline-interval {
   position: absolute;
   height: 100%;
-  background-color: red;
+  background-color: rgba(225, 82, 65, 0.1);
 }
 
 .ngx-slider {
-  position: relative;
-  z-index: 2;
+  /*position: relative;*/
+  /*z-index: 2;*/
   height: 30px;
 }
 
-.ngx-slider .ngx-slider-bar {
-  background-color: transparent;
+::ng-deep .ngx-slider .ngx-slider-bar {
+  background-color: transparent !important;
 }
 
-.ngx-slider .ngx-slider-pointer {
-  width: 12px;
-  height: 12px;
+::ng-deep app-root .ngx-slider .ngx-slider-pointer {
+  width: 20px;
+  height: 20px;
   border-radius: 50%;
-  background-color: #333;
   top: 50%;
-  transform: translateY(-50%);
+  transform: translate(0, 9px) !important;
+  background-color: #fff;
+  border: 1px solid #d3d3d3;
 }
 
-.ngx-slider .ngx-slider-floor,
-.ngx-slider .ngx-slider-ceil {
-  font-size: 12px;
+::ng-deep .ngx-slider-span.ngx-slider-bubble.ngx-slider-model-value {
+  transform: translate(0, -44px) !important;
+  color: white;
+  background: black;
+  border-radius: 2px;
+}
+
+::ng-deep .ngx-slider-span.ngx-slider-pointer:after {
+  background-color: black !important;
+  border-radius: unset !important;
+  width: 1px !important;
+  height: 70px !important;
+  top: -70px !important;
+  left: 10px !important;
+}
+::ng-deep .ngx-slider .ngx-slider-bar-wrapper.ngx-slider-full-bar {
+  margin-top: -42px;
+  height: 76px;
 }

@@ -1,17 +1,10 @@
 <div class="slider-container">
   <div class="timeline-bar">
     <div *ngFor="let interval of intervals"
+         class="timeline-interval"
          [style.left]="normalizeTimestamp(interval.from) + '%'"
-         [style.width]="(normalizeTimestamp(interval.to) - normalizeTimestamp(interval.from)) + '%'"
-         class="timeline-interval">
+         [style.width]="(normalizeTimestamp(interval.to) - normalizeTimestamp(interval.from)) + '%'">
     </div>
   </div>
-  <ngx-slider [(value)]="sliderValue" [options]="options">
-    <ng-template #tooltipTemplate let-tooltip="tooltip" let-placement="placement" let-content="content">
-      <!-- TODO: provide tooltip around the content.
-           {{tooltip}} will bind to the tooltip text
-           {{placement}} will bind to the tooltip placement ('top', 'bottom', 'right', 'left') -->
-      <div>{{content}}</div>
-    </ng-template>
-  </ngx-slider>
+  <ngx-slider [(value)]="sliderValue" [options]="options"></ngx-slider>
 </div>

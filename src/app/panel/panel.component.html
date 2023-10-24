@@ -1,0 +1,26 @@
+<div class="material-panel">
+  <mat-accordion>
+    <mat-expansion-panel
+      #expansionPanel
+
+      [hideToggle]="hideToggle"
+      [expanded]="isExpanded">
+      <mat-expansion-panel-header (click)="togglePanel($event)">
+        <mat-panel-title>
+          <div class="panel-heading">
+            <ng-content select="[preTitle]"></ng-content>
+            <h2>
+              {{ title }} <small *ngIf="subTitle">{{ subTitle }}</small>
+            </h2>
+          </div>
+        </mat-panel-title>
+        <mat-panel-description>
+          <div (click)="$event.stopPropagation()">
+            <ng-content select="[headerActions]"></ng-content>
+          </div>
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <ng-content></ng-content>
+    </mat-expansion-panel>
+  </mat-accordion>
+</div>
