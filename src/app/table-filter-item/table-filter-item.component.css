@@ -1,0 +1,13 @@
+::ng-deep .table-filter-custom .ng-option {
+  font-size: 13px;
+}
+
+
+::ng-deep .table-filter-custom .custom-input-search {
+  font-size: 13px;
+}
+
+::ng-deep .table-filter-custom .ng-option-selected {
+  color: #bdbdbd !important;
+  background-color: #e6f7ff !important;
+}

@@ -1,0 +1,23 @@
+.download-video-form-container {
+  display: flex;
+  justify-content: flex-end;
+  background-color: #f7f7f7;
+  padding: 10px 0;
+}
+
+.select-container {
+  display: flex;
+  margin-right: 32px;
+}
+.select-label {
+  margin-right: 5px;
+}
+
+.button-container {
+  display: flex;
+  margin-right: 32px;
+}
+
+button {
+  margin-right: 5px;
+}

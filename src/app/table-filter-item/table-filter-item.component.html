@@ -1,0 +1,40 @@
+<ng-select
+  *ngIf="data.items"
+  #select
+  class="table-filter-custom"
+  [searchable]="false"
+  [items]="data.items"
+  [(ngModel)]="data.selectedId"
+  [clearable]="false"
+  bindLabel="text"
+  bindValue="id"
+  [notFoundText]="'NoResultsFound'"
+  [style.width]="data.width"
+  (change)="onSelectValueChanged($event)"
+  [searchFn]="selectSearchFn">
+  <ng-template
+    ng-label-tmp
+    let-item="item">
+    <div [class]="item.id !== data.items[0].id ? item.classes : ''">
+      {{ item.text  }}
+    </div>
+  </ng-template>
+  <ng-template
+    ng-option-tmp
+    let-item="item">
+    <div
+      [style.width]="data.width"
+      [class]="item.classes">
+      {{ item.text }}
+    </div>
+  </ng-template>
+  <ng-template ng-header-tmp>
+    <input
+      autoFocus
+      class="custom-input-search"
+      type="text"
+      [placeholder]="data.placeHolder || 'Search...'"
+      (input)="select.filter(getInputValue($event))" />
+    <i class="material-icons">search</i>
+  </ng-template>
+</ng-select>

@@ -1,0 +1,22 @@
+<div class="download-video-form-container">
+  <span class="select-container">
+  <span class="select-label">seconds before: </span>
+<app-table-filter-item
+  [data]="secondsBefore"
+  (valueChanged)="setSecondsBefore($event)"
+  class="filter-box"></app-table-filter-item>
+</span>
+
+  <span class="select-container">
+  <span class="select-label">seconds after: </span>
+<app-table-filter-item
+  [data]="secondsAfter"
+  (valueChanged)="setSecondsAfter($event)"
+  class="filter-box"></app-table-filter-item>
+</span>
+  <span class="button-container">
+    <button>close</button>
+  <button>prepare download</button>
+  <button *ngIf="isDownloadPrepared">download</button>
+</span>
+</div>
